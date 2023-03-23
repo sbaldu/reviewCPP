@@ -10,16 +10,6 @@ int main() {
   auto func_byref = [&y]() { ++y; return y; };
   std::cout << "Return of func_byref = " << func_byref() << '\n';
 
-  std::cout << "y after func_byref = " << y << std::endl;
   auto func_mutable = [y]() mutable { ++y; return y; };
-  func_mutable();
-  std::cout << "y after func_mutable = " << y << std::endl;
-  func_byref();
-  std::cout << "y after another func_byref = " << y << std::endl;
   std::cout << "Return of func_mutable = " << func_mutable() << std::endl;
-  std::cout << "Return of func_mutable = " << func_mutable() << std::endl;
-  std::cout << "Return of func_mutable = " << func_mutable() << std::endl;
-  std::cout << "Return of func_mutable = " << func_mutable() << std::endl;
-  std::cout << "Return of func_mutable = " << func_mutable() << std::endl;
-  std::cout << "y after another func_mutable = " << y << std::endl;
 }
