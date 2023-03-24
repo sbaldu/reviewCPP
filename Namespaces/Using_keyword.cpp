@@ -1,22 +1,18 @@
 #include <iostream>
 
-namespace mycode{
-    void foo(){
-        std::cout<<"foo() called in my namespace"<<std::endl;
-    }
-}
+namespace mycode {
+void foo() { std::cout << "foo() called in my namespace" << std::endl; }
+}  // namespace mycode
 
 using namespace mycode;
 /*
-Subsequent code can refer to cout without prepending the namespace, but other items in the std
-namespace still need to be explicit
+Subsequent code can refer to cout without prepending the namespace, but other
+items in the std namespace still need to be explicit
 */
-using  std::cout;
+using std::cout;
 
-int main(){
+int main() {
+    cout << "Hi every one" << std::endl;
 
-cout<<"Hi every one"<<std::endl;
-
-foo();
-
+    foo();
 }
