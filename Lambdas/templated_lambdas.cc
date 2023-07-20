@@ -8,7 +8,7 @@ void func(T value) {
 int main() {
   // Define a lambda function that takes a number and doubles it
   // In order to make it generic, you write a templated lambda (C++20)
-  auto doubled = [] <typename T> (T value) { return 2*value; };
+  auto doubled = []<typename T>(T value) { return 2 * value; };
 
   // Test doubled for some data types
   // Notice that you don't have to specify the template parameter

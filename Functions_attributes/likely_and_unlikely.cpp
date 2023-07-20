@@ -3,10 +3,10 @@
 likely to a if statement structure menas that we say to the compiler if that
 peace of code is more likely to occur or not. */
 int main() {
-    int val{/**/};
-    if (val > 10) [[unlikely]] {     /* */
-    } else if (val < 5) [[likely]] { /* */
-    } else {
-        /**/
-    }
+  int val{/**/};
+  if (val > 10) [[unlikely]] {     /* */
+  } else if (val < 5) [[likely]] { /* */
+  } else {
+    /**/
+  }
 }

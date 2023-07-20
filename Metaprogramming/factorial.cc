@@ -2,12 +2,10 @@
 
 unsigned long long factorial(int num) {
   if (num == 0) {
-	return 1;
+    return 1;
   } else {
-	return num*factorial(num - 1);
+    return num * factorial(num - 1);
   }
 }
 
-int main() {
-  std::cout << factorial(60) << '\n';
-}
+int main() { std::cout << factorial(60) << '\n'; }

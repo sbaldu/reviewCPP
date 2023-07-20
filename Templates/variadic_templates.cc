@@ -38,11 +38,11 @@ public:
     }
   }
 
-  // Then you define print as a recursive function that takes one argument at a time, handles it, and 
+  // Then you define print as a recursive function that takes one argument at a time, handles it, and
   // subsequently calls itself passing the remaining arguments
   template <typename T1, typename... Tn>
-  void print(T1&& arg1, Tn&&... args) { 	// We use forwarding references because the type of the object
-    handlePrint(std::forward<T1>(arg1)); 	// that we are trying to print might be too expensive to copy
+  void print(T1&& arg1, Tn&&... args) {   // We use forwarding references because the type of the object
+    handlePrint(std::forward<T1>(arg1));  // that we are trying to print might be too expensive to copy
     print(std::forward<Tn>(args)...);
   }
 
@@ -51,8 +51,8 @@ public:
 
   // Alternatively, by using folding you can implement the print function without recursion
   template <typename... Tn>
-  void print_norec(Tn&&... args) { 	
-	(handlePrint(std::forward<Tn>(args)),...);
+  void print_norec(Tn&&... args) {
+    (handlePrint(std::forward<Tn>(args)), ...);
   }
 };
 
@@ -60,8 +60,8 @@ int main() {
   newPrint<int, char, std::string, bool>(5, 'a', "salsedine", true);
 
   printer p;
-  p.print<int>(5, 4, 3, 2); 		 // You don't have to repeat the type for every parameter because of 
-  p.print<char>('a', 'b', 'c', 'd'); // template argument deduction
+  p.print(5, 4, 3, 2);                // You don't have to repeat the type for every parameter because of
+  p.print<char>('a', 'b', 'c', 'd');  // template argument deduction
   p.print<std::vector<int>>({2, 3, 4});
   p.print();
   p.print<int, char, std::string, bool>(5, 'a', "salsedine", true);

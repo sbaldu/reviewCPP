@@ -6,7 +6,7 @@ namespace.
 */
 
 namespace MyLibraries::Subsection1::Subsection2 {
-void foo() { std::cout << "foo() was called" << std::endl; }
+  void foo() { std::cout << "foo() was called" << std::endl; }
 }  // namespace MyLibraries::Subsection1::Subsection2
 
 namespace Francesco = MyLibraries::Subsection1::Subsection2;

@@ -7,7 +7,7 @@ foo()
 #include <iostream>
 
 namespace mycode {
-void foo() { std::cout << "foo() called in my namespace" << std::endl; }
+  void foo() { std::cout << "foo() called in my namespace" << std::endl; }
 }  // namespace mycode
 
 int main() { mycode::foo(); }
