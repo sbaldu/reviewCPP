@@ -8,4 +8,4 @@ unsigned long long factorial(int num) {
   }
 }
 
-int main() { std::cout << factorial(60) << '\n'; }
+int main() { std::cout << factorial(20) << '\n'; }

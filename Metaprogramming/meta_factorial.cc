@@ -12,4 +12,4 @@ public:
   static const unsigned long long value{1};
 };
 
-int main() { std::cout << factorial<60>::value << '\n'; }
+int main() { std::cout << factorial<20>::value << '\n'; }
